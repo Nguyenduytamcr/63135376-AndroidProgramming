@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // gắn Layout tương ứng với file này
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
     }
