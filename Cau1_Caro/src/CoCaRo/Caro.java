@@ -126,6 +126,16 @@ public class Caro extends JFrame implements ActionListener{
 		// nếu không đương chéo nào thỏa mãn thì trả về false.
 		return false;
 	}
+	// đánh thêm 1 bước vào bàn cờ caro
+	public void addPoint(int i, int j) {
+		if (Size > 0)
+			b[xUndo[Size - 1]][yUndo[Size - 1]].setBackground(background_cl);
+		xUndo[Size] = i;
+		yUndo[Size] = j;
+		Size++;
+		
+	}
+	
 	
 
 }
