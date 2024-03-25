@@ -1,5 +1,6 @@
 package com.example.cau2_appbmi;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 double w = Double.parseDouble(edtCanNang.getText().toString());
                 double h = Double.parseDouble(edtChieuCao.getText().toString());
+                Intent intent = new Intent(MainActivity.this,KetQua.class);
+                intent.putExtra("Cân nặng",w);
+                intent.putExtra("Chiều Cao",h);
+                startActivities(intent);
             }
         });
     }
