@@ -143,6 +143,10 @@ public class Caro extends JFrame implements ActionListener{
 			b[i][j].setForeground(y_cl);
 			lb.setText("Lượt Của X");
 		}
+		tick[i][j] = false;
+		count  = 1 - count;
+		b[i][j].setBackground(Color.GRAY);
+		undo_bt.setEnabled(true);
 	}
 	
 	
