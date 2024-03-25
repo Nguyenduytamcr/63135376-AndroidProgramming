@@ -6,6 +6,7 @@ import java.awt.Container;
 import java.awt.EventQueue;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
@@ -162,6 +163,16 @@ public  class Caro extends JFrame implements ActionListener{
 			if (Size == 0)
 				undo_bt.setEnabled(false);
 		}
+	}
+	public void actionPerformed(ActionEvent e) {
+		if (e.getActionCommand() == "New Game") {
+			new Caro("demo demo demo");
+			this.dispose();
+		}
+		else
+			if (e.getActionCommand() == "Undo") {
+				undo();
+			} 
 	}
 	public static void main(String[] args) {
 		new Caro("CỜ CARO");
