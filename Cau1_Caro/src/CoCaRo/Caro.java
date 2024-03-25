@@ -133,7 +133,12 @@ public class Caro extends JFrame implements ActionListener{
 		xUndo[Size] = i;
 		yUndo[Size] = j;
 		Size++;
-		
+		if (count % 2 == 0) {
+			b[i][j].setText("X");
+			b[i][j].setForeground(x_cl);
+			lb.setText("Lượt Của O");
+		}
+		else
 	}
 	
 	
