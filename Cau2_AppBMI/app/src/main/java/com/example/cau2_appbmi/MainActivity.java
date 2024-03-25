@@ -26,12 +26,8 @@ public class MainActivity extends AppCompatActivity {
         btnDanhGia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double w = Double.parseDouble(edtCanNang.getText().toString());
-                double h = Double.parseDouble(edtChieuCao.getText().toString());
-                Intent intent = new Intent(MainActivity.this,KetQua.class);
-                intent.putExtra("Cân nặng",w);
-                intent.putExtra("Chiều Cao",h);
-                startActivities(intent);
+
+
             }
         });
     }

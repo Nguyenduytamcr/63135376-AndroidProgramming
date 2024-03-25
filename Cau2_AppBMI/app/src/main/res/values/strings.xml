@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Cau2_AppBMI</string>
+    <string name="h_y_nh_p_c_n_n_ng_v_chi_u_cao_n_t_t_t_t_t_t_t_c_a_b_n_v_o_y">Hãy Nhập Cân Nặng Và Chiều Cao \n \t\t\t\t\t\t\t Của Bạn Vào Đây!</string>
+    <string name="o_ch_s_bmi">ĐO CHỈ SỐ BMI</string>
+    <string name="c_n_n_ng">Cân Nặng:</string>
+    <string name="chi_u_cao">Chiều cao:</string>
+    <string name="nh_gi">Đánh Giá</string>
 </resources>
