@@ -7,4 +7,12 @@
     <string name="nh_gi">Đánh Giá</string>
     <string name="button">Button</string>
     <string name="name">Name</string>
+    <string name="h_y_nh_p_chi_u_cao_v_c_n_n_ng_t_i_y">Hãy Nhập Chiều Cao Và Cân Nặng Tại Đây</string>
+    <string name="chi_u_ca">Chiều Cao:</string>
+    <string name="c_n_n_n">Cân Nặng:</string>
+    <string name="nh_gia">Đánh Giá</string>
+    <string name="gi_i_t_nh">Giới Tính:</string>
+    <string name="ch_s_bmi_c_a_b_n_l">Chỉ số BMI của bạn là:</string>
+    <string name="nam">Nam</string>
+    <string name="n">Nữ</string>
 </resources>
