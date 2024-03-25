@@ -14,7 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-public class Caro extends JFrame implements ActionListener{
+public  class Caro extends JFrame implements ActionListener{
 	// đưa màu
 	Color background_cl = Color.white;
 	Color x_cl = Color.red;
@@ -163,6 +163,8 @@ public class Caro extends JFrame implements ActionListener{
 				undo_bt.setEnabled(false);
 		}
 	}
-	
+	public static void main(String[] args) {
+		new Caro("CỜ CARO");
+	}
 
 }
