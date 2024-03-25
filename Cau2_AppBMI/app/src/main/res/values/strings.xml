@@ -5,4 +5,6 @@
     <string name="c_n_n_ng">Cân Nặng:</string>
     <string name="chi_u_cao">Chiều cao:</string>
     <string name="nh_gi">Đánh Giá</string>
+    <string name="button">Button</string>
+    <string name="name">Name</string>
 </resources>
