@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,9 +23,33 @@ public class MainActivity extends AppCompatActivity {
 
         EditText edtChieuCao = findViewById(R.id.edtChieuCao);
         EditText edtCanNang = findViewById(R.id.edtCanNang);
+        TextView txtKetQua = findViewById(R.id.txtKetQua);
+        TextView txtNhanXet = findViewById(R.id.txtNhanXet);
         RadioButton rbnam = findViewById(R.id.rb_Nam);
         RadioButton rbnu = findViewById(R.id.rb_Nu);
         Button danhgia = findViewById(R.id.btnDanhGia);
+
+        danhgia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double h = Double.parseDouble(edtChieuCao.getText().toString())/100; //rut gon
+                double w = Double.parseDouble(edtCanNang.getText().toString());
+                double chiso = Math.round((w/Math.pow(h,2))*10)/10.0;
+                if(rbnam.isChecked()){
+                    if(chiso <18.5){
+                        txtKetQua.setText(String.valueOf(chiso));
+                        txtNhanXet.setText("Bạn cần bồi bổ thêm!");
+                    }
+                    else if(chiso <18.5){
+                        txtKetQua.setText(String.valueOf(chiso));
+                        txtNhanXet.setText("Bạn cần bồi bổ thêm!");
+                    }
+                    
+                }
+            }
+        });
+
+
 
     }
 }
