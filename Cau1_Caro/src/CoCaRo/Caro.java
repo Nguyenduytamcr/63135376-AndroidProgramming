@@ -70,6 +70,31 @@ public class Caro extends JFrame implements ActionListener{
 		undo_bt.setEnabled(false);
 	}
 	// hàm kiểm tra chiến thắng
-	
+	public boolean checkWin(int i, int j) {
+		int d = 0, k = i, h;
+		// kiểm tra hàng
+		while (b[k][j].getText() == b[i][j].getText()) {
+			d++;
+			k++;
+		}
+		k = i - 1;
+		while (b[k][j].getText() == b[i][j].getText()) {
+			d++;
+			k--;
+		}
+		if (d > 4) return true;
+		d = 0; h = j;
+		// kiểm tra cột
+		while(b[i][h].getText() == b[i][j].getText()) {
+			d++;
+			h++;
+		}
+		h = j - 1;
+		while(b[i][h].getText() == b[i][j].getText()) {
+			d++;
+			h--;
+		}
+		if (d > 4) return true;
+	}
 
 }
