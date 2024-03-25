@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +20,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        EditText edtChieuCao = findViewById(R.id.edtChieuCao);
+        EditText edtCanNang = findViewById(R.id.edtCanNang);
+        RadioButton rbnam = findViewById(R.id.rb_Nam);
+        RadioButton rbnu = findViewById(R.id.rb_Nu);
+        Button danhgia = findViewById(R.id.btnDanhGia);
 
     }
 }
