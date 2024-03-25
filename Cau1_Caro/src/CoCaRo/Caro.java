@@ -159,7 +159,10 @@ public class Caro extends JFrame implements ActionListener{
 			if (count % 2 == 0) lb.setText("Lượt Của X"); 
 				else lb.setText("Lượt Của O");
 			Size--;
+			if (Size == 0)
+				undo_bt.setEnabled(false);
 		}
+	}
 	
 
 }
