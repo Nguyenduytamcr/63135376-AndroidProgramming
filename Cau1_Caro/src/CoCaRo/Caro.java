@@ -173,7 +173,34 @@ public  class Caro extends JFrame implements ActionListener{
 			if (e.getActionCommand() == "Undo") {
 				undo();
 			} 
+		else
+			if (e.getActionCommand() == "Exit") {
+				System.exit(0);;
+			}
+		else {
+			String s = e.getActionCommand();
+			int k = s.indexOf(32);
+			int i = Integer.parseInt(s.substring(0, k));
+			int j = Integer.parseInt(s.substring(k + 1, s.length()));
+			if (tick[i][j]) {
+				addPoint(i, j);
+			}
+			if (checkWin(i, j)) {
+				lb.setBackground(Color.MAGENTA);
+				lb.setText(b[i][j].getText() + " WIN");
+				for (i = 1; i <= column; i++)
+					for (j = 1; j <= row; j++) 
+						b[i][j].setEnabled(false);
+				undo_bt.setEnabled(false);
+				newGame_bt.setBackground(Color.YELLOW);
+			}
+		}
+		
 	}
+	
+	
+	
+	
 	public static void main(String[] args) {
 		new Caro("CỜ CARO");
 	}
