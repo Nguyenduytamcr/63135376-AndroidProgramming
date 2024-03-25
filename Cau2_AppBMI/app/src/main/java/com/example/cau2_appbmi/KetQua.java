@@ -1,6 +1,10 @@
 package com.example.cau2_appbmi;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,12 +17,14 @@ public class KetQua extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_ket_qua);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        Button btnTrove = findViewById(R.id.btnTroVe);
+        TextView textView = findViewById(R.id.textview);
+        Intent intent = getIntent();
+        Double w = intent.getDoubleExtra("Cân Nặng",0);
+        Double h = intent.getDoubleExtra("Chiều Cao",0);
+        
+
     }
 }
