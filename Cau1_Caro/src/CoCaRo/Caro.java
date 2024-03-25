@@ -138,7 +138,11 @@ public class Caro extends JFrame implements ActionListener{
 			b[i][j].setForeground(x_cl);
 			lb.setText("Lượt Của O");
 		}
-		else
+		else{
+			b[i][j].setText("O");
+			b[i][j].setForeground(y_cl);
+			lb.setText("Lượt Của X");
+		}
 	}
 	
 	
