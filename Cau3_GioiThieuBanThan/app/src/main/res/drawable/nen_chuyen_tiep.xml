@@ -9,7 +9,7 @@
         >
     <corners
         android:bottomRightRadius="120dp"
-        android:bottomLeftradius="120dp"
+        android:bottomLeftRadius="120dp"
         >
 
     </corners>
