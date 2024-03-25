@@ -148,7 +148,15 @@ public class Caro extends JFrame implements ActionListener{
 		b[i][j].setBackground(Color.GRAY);
 		undo_bt.setEnabled(true);
 	}
-	
+	// đánh lại nếu đánh nhầm
+	public void undo() {
+		if (Size > 0) {
+			b[xUndo[Size - 1]][yUndo[Size - 1]].setText(" ");
+			b[xUndo[Size - 1]][yUndo[Size - 1]].setActionCommand(xUndo[Size - 1]+ " " + yUndo[Size - 1]);
+			b[xUndo[Size - 1]][yUndo[Size - 1]].setBackground(background_cl);
+			tick[xUndo[Size - 1]][yUndo[Size - 1]] = true;
+			
+		}
 	
 
 }
