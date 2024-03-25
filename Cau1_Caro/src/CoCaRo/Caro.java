@@ -31,7 +31,7 @@ public class Caro extends JFrame implements ActionListener{
 	JLabel lb;
 	JButton newGame_bt, undo_bt, exit_bt;
 	private JButton b[][] = new JButton[column + 2][row + 2];// tạo mảng chứa các button
-	public void CaRo(String s) {
+	public Caro(String s) {
 		super(s);
 		cn =this.getContentPane();
 		pn = new JPanel();
@@ -69,6 +69,7 @@ public class Caro extends JFrame implements ActionListener{
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		undo_bt.setEnabled(false);
 	}
-	// hàm kiểm tra chiến th
+	// hàm kiểm tra chiến thắng
+	
 
 }
