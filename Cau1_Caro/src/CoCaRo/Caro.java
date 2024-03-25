@@ -95,6 +95,37 @@ public class Caro extends JFrame implements ActionListener{
 			h--;
 		}
 		if (d > 4) return true;
+		// kiểm tra đường chéo 1
+		h = i; k = j; d = 0;
+		while (b[i][j].getText() == b[h][k].getText()) {
+			d++;
+			h++;
+			k++;
+		}
+		h = i - 1; k = j - 1;
+		while (b[i][j].getText() == b[h][k].getText()) {
+			d++;
+			h--;
+			k--;
+		}
+		if (d > 4) return true;
+		// kiểm tra đường chéo 2
+		h = i; k = j; d = 0;
+		while (b[i][j].getText() == b[h][k].getText()) {
+			d++;
+			h++;
+			k--;
+		}
+		h = i - 1; k = j + 1;
+		while (b[i][j].getText() == b[h][k].getText()) {
+			d++;
+			h--;
+			k++;
+		}
+		if (d > 4) return true;
+		// nếu không đương chéo nào thỏa mãn thì trả về false.
+		return false;
 	}
+	
 
 }
