@@ -12,14 +12,14 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnDanhGia;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         EditText edtCanNang = findViewById(R.id.edtCanNang);
-        EditText edtChieuCao = 
+        EditText edtChieuCao = findViewById(R.id.edtChieuCao);
+        Button btnDanhGia = findViewById(R.id.btnDanhGia);
 
     }
 }
