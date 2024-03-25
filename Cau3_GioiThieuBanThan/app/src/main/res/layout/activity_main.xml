@@ -26,6 +26,7 @@
                 android:background="@drawable/nen_chuyen_tiep">
 
                 <ImageView
+
                     android:id="@+id/imageView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -50,6 +51,23 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="tam.nd.63cntt@ntu.edu.vn" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cài Đặt Tài Khoản"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:drawableStart="@android:drawable/ic_menu_manage"
+                    />
+
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
