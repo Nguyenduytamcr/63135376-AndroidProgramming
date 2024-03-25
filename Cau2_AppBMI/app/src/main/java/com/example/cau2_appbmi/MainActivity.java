@@ -36,15 +36,34 @@ public class MainActivity extends AppCompatActivity {
                 double w = Double.parseDouble(edtCanNang.getText().toString());
                 double chiso = Math.round((w/Math.pow(h,2))*10)/10.0;
                 if(rbnam.isChecked()){
-                    if(chiso <18.5){
+                    if(chiso < 18.5){
                         txtKetQua.setText(String.valueOf(chiso));
                         txtNhanXet.setText("Bạn cần bồi bổ thêm!");
                     }
-                    else if(chiso <18.5){
+                    else if(chiso >= 18.5 && chiso <= 24.9){
+                        txtKetQua.setText(String.valueOf(chiso));
+                        txtNhanXet.setText("Bạn có chỉ số");
+                    }
+                    else if(chiso == 25) {
                         txtKetQua.setText(String.valueOf(chiso));
                         txtNhanXet.setText("Bạn cần bồi bổ thêm!");
                     }
-                    
+                    else if(chiso > 25 && chiso <= 29.9){
+                        txtKetQua.setText(String.valueOf(chiso));
+                        txtNhanXet.setText("Bạn cần bồi bổ thêm!");
+                    }
+                    else if(chiso >= 30 && chiso <= 34.9){
+                        txtKetQua.setText(String.valueOf(chiso));
+                        txtNhanXet.setText("Bạn cần bồi bổ thêm!");
+                    }
+                    else if(chiso >=35 && chiso <= 39.9){
+                        txtKetQua.setText(String.valueOf(chiso));
+                        txtNhanXet.setText("Bạn cần bồi bổ thêm!");
+                    }
+                    else if(chiso == 40){
+                        txtKetQua.setText(String.valueOf(chiso));
+                        txtNhanXet.setText("Bạn cần bồi bổ thêm!");
+                    }
                 }
             }
         });
