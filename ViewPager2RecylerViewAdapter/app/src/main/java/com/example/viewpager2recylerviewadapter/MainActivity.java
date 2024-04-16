@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        viewPagerDatas = new getDataForViewPager();
+        viewPagerDatas = getDataForViewPager();
         viewPager2Land = findViewById(R.id.vp2Land);
         landScapeAdapter = new LandScapeAdapter(this,viewPagerDatas);
         viewPager2Land.setAdapter(landScapeAdapter);
@@ -46,9 +46,9 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<LandScape> dsData = new ArrayList<>();
         LandScape landScape = new LandScape("des","Ảnh đẹp 4k");
         dsData.add(landScape);
-        dsData.add(new LandScape("anh1","Ảnh đẹp 4k"));
-        dsData.add(new LandScape("anh2","Ảnh đẹp 4k"));
-        dsData.add(new LandScape("anh3","Ảnh đẹp 4k"));
+        dsData.add(new LandScape("anh1","Ảnh đẹp nhề"));
+        dsData.add(new LandScape("anh2","Chắc là ảnh đẹp"));
+        dsData.add(new LandScape("anh3","Có thể là ảnh đẹp"));
         return dsData;
     }
 }
