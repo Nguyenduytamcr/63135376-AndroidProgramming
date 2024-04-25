@@ -1,12 +1,13 @@
 package com.example.vidu2_intent;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity2 extends AppCompatActivity {
 
@@ -15,10 +16,30 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main2);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+        Button btn_comfirm = (Button) findViewById(R.id.btn_main);
+        Button btn_cancel = (Button) findViewById(R.id.btn_cancel);
+
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setResult(RESULT_CANCELED);
+                finish();
+            }
+        });
+
+        btn_comfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                EditText edt_ten = (EditText) findViewById(R.id.edt_ten);
+                EditText edt_namsinh = (EditText) findViewById(R.id.edt_namsinh);
+                String edtTen = edt_ten.getText().toString();
+                String edtnamsinh = edt_namsinh.getText().toString();
+                intent.putExtra("ten",edtTen);
+                intent.putExtra("namsinh",edtnamsinh);
+                setResult(RESULT_OK,intent);
+                finish();
+            }
         });
     }
 }
