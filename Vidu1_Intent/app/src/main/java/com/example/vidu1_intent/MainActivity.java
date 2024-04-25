@@ -15,5 +15,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    
+    public void ChuyenManHinh(View v){
+        Intent iChuyenManHinh = new Intent(this, MainActivity2.class);
+        startActivity(iChuyenManHinh);
+    }
 }
