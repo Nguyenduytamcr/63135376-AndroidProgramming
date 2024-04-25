@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         btn_nhaplieu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent iNhapLieu = new Intent(MainActivity.this, ManHinhNhapLieu.class);
+                Intent iNhapLieu = new Intent(MainActivity.this, MainActivity2.class);
                 startActivityForResult(iNhapLieu,8000);
             }
         });
